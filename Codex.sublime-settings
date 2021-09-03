@@ -1,0 +1,5 @@
+{
+	"openai_api_key": "<Your OpenAI API key should go here!>",
+	"engine": "davinci-codex",
+	"max_tokens": 10,
+}
