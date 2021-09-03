@@ -1,6 +1,8 @@
 # Codex for Sublime Text
 
-This package won't work unless you have an OpenAI API key. If you'd like to use Codex, you need an API key that has Codex enabled.
+This package won't work unless you have an OpenAI API key. If you'd like to use Codex (i.e. `davinci-codex` as opposed to another model), you need an API key that has Codex enabled. To apply for an OpenAI API key go to https://beta.openai.com/
+
+## Instructions
 
 First go to `Preferences > Codex > Codex Settings` and add your API key.
 
