@@ -2,6 +2,7 @@ import sublime
 import sublime_plugin
 
 import subprocess
+import json
 
 
 class CodexCommand(sublime_plugin.TextCommand):
@@ -13,10 +14,14 @@ class CodexCommand(sublime_plugin.TextCommand):
         # Get settings every API call so that changes to Codex.sublime-settings are automatically used
         # without needing to reload codex.py
         settings = sublime.load_settings("Codex.sublime-settings")
-        api_key = settings.get("openai_api_key")
-        assert api_key != "<Your OpenAI API key should go here!>","Make sure to put your OpenAI API Key in Codex.sublime-settings"
         max_tokens = settings.get("max_tokens")
         engine = settings.get("engine")
+        api_key = settings.get("openai_api_key")
+        
+        if api_key == "<Your OpenAI API key should go here!>":
+            sublime.error_message("""Make sure to put your OpenAI API Key in Codex.sublime-settings
+Go to `Preferences > Package Settings > Codex > Codex Settings`""")
+            return
 
         # Get sublime selections (highlighted regions and cursor positions)
         sels = self.view.sel()
