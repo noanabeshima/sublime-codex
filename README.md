@@ -1,12 +1,12 @@
 # Codex for Sublime Text
 
-This package won't work unless you have an OpenAI API key. If you'd like to use Codex, you need an API key that has Codex enabled. To apply for an OpenAI API key go to https://beta.openai.com/
+This is a package that lets you use OpenAI Codex in Sublime Text. To use it, you need to have access to OpenAI's Codex API.
 
 ## Manual Installation
 
 Open Sublime Text and go to `Preferences > Browse Packages...` to get to the Sublime packages folder, and `git clone` this repo into the folder. Rename it from `sublime-codex` to `Codex`.
 
-## Instructions
+## Usage
 
 First go to `Preferences > Codex > Codex Settings` and add your API key.
 
