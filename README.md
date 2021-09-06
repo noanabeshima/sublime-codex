@@ -8,7 +8,7 @@ Open Sublime Text and go to `Preferences > Browse Packages...` to get to the Sub
 
 ## Usage
 
-First go to `Preferences > Codex > Codex Settings` and add your API key.
+First go to `Preferences > Package Settings > Codex > Codex Settings` and add your API key.
 
 Then, place your cursor where you'd like to generate code or highlight one or more regions you'd like to include in the prompt and press `CTRL+\`.
 
