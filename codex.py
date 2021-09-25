@@ -17,6 +17,7 @@ class CodexCommand(sublime_plugin.TextCommand):
         max_tokens = settings.get("max_tokens")
         engine = settings.get("engine")
         api_key = settings.get("openai_api_key")
+        temperature = settings.get("temperature")
         
         if api_key == "<Your OpenAI API key should go here!>":
             sublime.error_message("""Make sure to put your OpenAI API Key in Codex.sublime-settings
@@ -58,7 +59,8 @@ Go to `Preferences > Package Settings > Codex > Codex Settings`""")
 
         data = json.dumps({
             'prompt': prompt,
-            'max_tokens': max_tokens
+            'max_tokens': max_tokens,
+            'temperature': temperature
             })
         proc = subprocess.Popen(["curl", "https://api.openai.com/v1/engines/"+engine+"/completions", "-H", "Content-Type: application/json", "-H", "Authorization: Bearer "+api_key, "-d", data], stdout=subprocess.PIPE)
         (out, err) = proc.communicate()

@@ -2,4 +2,5 @@
 	"openai_api_key": "<Your OpenAI API key should go here!>",
 	"max_tokens": 50,
 	"engine": "davinci-codex",
+	"temperature": 0.0
 }
